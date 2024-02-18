@@ -2,7 +2,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        main4();
+        main3();
     }
 
     public static void main0() {
@@ -116,46 +116,11 @@ public class Main {
 
     public static void main3(){
 
-        Match[] differentMatches = new Match[190];
-        int numberOfDifferentMatches = 0;
-        Round[] rounds = new Round[38];
-
-        for (int i = 0; i < 20; i++) {
-
-            System.out.println("i = " + i);
-
-            for (int j = i; j < 20; j++) {
-
-                if(i != j){
-
-                    differentMatches[numberOfDifferentMatches] = new Match(i, j);
-
-                    System.out.println("Different match " + numberOfDifferentMatches +
-                            " : " + differentMatches[numberOfDifferentMatches].homeTeam +
-                            " X " + differentMatches[numberOfDifferentMatches].awayTeam);
-
-                    numberOfDifferentMatches++;
-                }
-            }
-
-        }
-
-        for (int i = 0; i < 38; i++) {
-
-            rounds[i] = new Round();
-
-            rounds[i].roundNumber = i;
-
-
-        }
-    }
-
-    public static void main4(){
-
         int[][] matrix0 = new int[20][20];
         int contDifNumbers[] = new int[38];
+        Match newMatch; //a match that is created on each iteration of the repetition of the inner loop
 
-        matrix0 = fillUpperPortion(matrix0);
+        matrix0 = fillMatrix(matrix0);
 
         print2DMatrix(matrix0);
 
@@ -248,7 +213,7 @@ public class Main {
         }
     }
 
-    private static int[][] fillUpperPortion(int[][] matrix){
+    private static int[][] fillMatrix(int[][] matrix){
 
         int numberOfLines = matrix.length;
         int numberOfColumns = matrix[0].length;

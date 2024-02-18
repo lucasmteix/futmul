@@ -4,19 +4,20 @@ public class Match {
     //ATTRIBUTES
 
     //Object attributes
+    int round; //the round in which the match occurs
+    Team homeTeam; //the team that is playing at home
+    Team awayTeam; //the team that is playing away
 
-    int homeTeam; //the team that is playing at home
-    int awayTeam; //the team that is playing away
+    //Constructor
+    public Match(Team homeTeam, Team awayTeam) {
+        this.homeTeam = homeTeam;
+        this.awayTeam = awayTeam;
+    }
 
 
 
 
     //METHODS
 
-    //Constructor
-
-    public Match(int homeTeam, int awayTeam) {
-        this.homeTeam = homeTeam;
-        this.awayTeam = awayTeam;
-    }
+    //
 }
